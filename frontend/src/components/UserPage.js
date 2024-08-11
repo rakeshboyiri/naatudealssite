@@ -12,7 +12,7 @@ const UserPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/products');
+        const response = await axios.get('https://naatudealssite-backend.onrender.com');
         setProducts(response.data);
         setFilteredProducts(response.data); // Initialize filtered products
       } catch (err) {
