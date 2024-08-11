@@ -24,7 +24,7 @@ const AdminPage = () => {
 
   const removeProduct = async (id) => {
     try {
-      await axios.delete(`'https://naatudealssite-backend.onrender.com`+`/api/products/${id}`);
+      await axios.delete(`'https://naatudealssite-backend.onrender.com/api/products/${id}`);
       setProducts(products.filter(product => product._id !== id));
       setFilteredProducts(filteredProducts.filter(product => product._id !== id)); // Update filtered products
     } catch (err) {
