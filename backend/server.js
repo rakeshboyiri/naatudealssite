@@ -14,7 +14,7 @@ app.use(cors());
 app.use('/api/products', productRoutes);
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/productmanagement', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
