@@ -47,7 +47,7 @@ const UserPage = () => {
         <div className='logo-div'>
           <img src={logo} alt='logo' className='logo-image'/> <br></br>
           <h1>Naatu Deals</h1>
-          <h3>Join Our Telegram Channel & Grap the Deals</h3>
+          <h3>Join Our Telegram Channel & Grab the Deals</h3>
           <a href="https://t.me/NaatuDeals" target="_blank" rel="noopener noreferrer">Join Our Channel</a>
         </div>
       </div>
