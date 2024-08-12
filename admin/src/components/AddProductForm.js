@@ -9,7 +9,7 @@ const AddProductForm = ({ onAddProduct }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/products', {
+      const response = await axios.post('https://naatudealssite-backend.onrender.com/api/products', {
         name,
         photo,
         link,
