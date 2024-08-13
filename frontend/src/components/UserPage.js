@@ -49,16 +49,19 @@ const UserPage = () => {
           <div className='header-text'>
           <h1>Naatu Deals</h1>
           <h3>Join Our Telegram Channel & Grab the Deals</h3>
+          <a href="https://t.me/NaatuDeals" target="_blank" rel="noopener noreferrer" className='telegram-link'>Join Our Channel</a>
           </div>
-          <a href="https://t.me/NaatuDeals" target="_blank" rel="noopener noreferrer">Join Our Channel</a>
+         
         </div>
       </div>
+      <div className='search-bar-div'>
       <input
         type="text"
         placeholder="Search products..."
-        value={searchQuery}
-        onChange={handleSearchChange}
+        value={searchQuery} 
+        onChange={handleSearchChange} className='search-bar'
       />
+      </div>
       <ProductListUser products={filteredProducts} onProductClick={handleProductClick} />
     </div>
   );

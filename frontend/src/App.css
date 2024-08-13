@@ -46,11 +46,24 @@ input, button {
   text-align: center;
 }
 .header-text{
-  margin: auto;
+  margin:30px  auto 30px auto;
+  padding: 20px 0px 20px 0px;
   background-color: #92bce9;
+
   width: 100%;
 }
 
+.telegram-link{
+  color: red;
+  text-decoration: none; 
+  font-size: 25px;
+  background-color: rgb(24, 216, 24);
+}
+
+.telegram-link:hover{
+ 
+  background-color: orange;
+}
 .user-header h1 {
   margin: 0;
   font-size: 2rem;
@@ -62,8 +75,8 @@ input[type="text"] {
   width: 100%;
   max-width: 500px;
   padding: 10px;
-  margin: 20px 0;
-  border: 1px solid #ddd;
+  margin: 30px 0px 80px 30%;
+  border: 5px solid #2308d6;
   border-radius: 5px;
   font-size: 1rem;
 }
@@ -116,3 +129,5 @@ input[type="text"] {
   width: 100px;
   height: 100px;
 }
+
+

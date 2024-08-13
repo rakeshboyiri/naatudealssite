@@ -108,3 +108,13 @@ input[type="text"] {
   width: 100px;
   height: 100px;
 }
+
+.search-bar{
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #d44f4f;
+  border-radius: 5px;
+  font-size: 1rem;
+}
