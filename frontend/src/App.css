@@ -118,14 +118,14 @@ input[type="text"] {
 .product-item a {
   display: block;
   padding: 10px;
-  background-color: #007bff;
+
   color: #fff;
   text-decoration: none;
   border-radius: 0 0 5px 5px;
 }
 
 .product-item a:hover {
-  background-color: #0056b3;
+ 
 }
 
 .logo-image{
