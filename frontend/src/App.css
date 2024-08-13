@@ -1,3 +1,6 @@
+body{
+  margin: 0px;
+}
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -37,10 +40,13 @@ input, button {
 
 /* Header section styling */
 .user-header {
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 100%);
   padding: 10px 20px;
   border-bottom: 2px solid #ddd;
   text-align: center;
+}
+.header-text{
+  background-color: #92bce9;
 }
 
 .user-header h1 {
