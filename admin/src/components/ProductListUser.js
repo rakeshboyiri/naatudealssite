@@ -7,8 +7,8 @@ const ProductListUser = ({ products, onProductClick }) => {
       {products.map(product => (
         <div key={product._id} className='product-item'>
           <img src={product.photo} alt={product.name} />
-          <h3>{product.name}</h3>
-          <a href="#" onClick={() => onProductClick(product.link)}>Buy Now</a>
+          
+          <a href="#" onClick={() => onProductClick(product.link)}><h3>{product.name}</h3></a>
         </div>
       ))}
     </div>
