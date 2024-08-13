@@ -66,15 +66,15 @@ input, button {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 0px;
   justify-content: center;
 }
 
 .product-item {
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
-  width: 200px;
+  width: 150px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
