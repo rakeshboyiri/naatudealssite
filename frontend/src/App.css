@@ -46,7 +46,9 @@ input, button {
   text-align: center;
 }
 .header-text{
+  margin: auto;
   background-color: #92bce9;
+  width: 100%;
 }
 
 .user-header h1 {
