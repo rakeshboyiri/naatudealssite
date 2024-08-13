@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './AddProductForm.css'; // Import the CSS file
 
 const AddProductForm = ({ onAddProduct }) => {
   const [name, setName] = useState('');
@@ -24,32 +25,33 @@ const AddProductForm = ({ onAddProduct }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Product Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Product Photo URL"
-        value={photo}
-        onChange={(e) => setPhoto(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Product Link"
-        value={link}
-        onChange={(e) => setLink(e.target.value)}
-        required
-      />
-      <button type="submit">Add Product</button>
-    </form>
+    <div className='add-product-form'>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Product Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Product Photo URL"
+          value={photo}
+          onChange={(e) => setPhoto(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Product Link"
+          value={link}
+          onChange={(e) => setLink(e.target.value)}
+          required
+        />
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
   );
 };
 
 export default AddProductForm;
-

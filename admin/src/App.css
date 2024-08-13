@@ -50,14 +50,16 @@ input, button {
 }
 
 /* Search input styling */
-input[type="text"] {
-  width: 100%;
-  max-width: 500px;
+.search-bar {
+  width: 80%;
   padding: 10px;
-  margin: 20px 0;
-  border: 1px solid #ddd;
+  margin: 50px 0px 50px 6%;
+  border: 5px solid #2308d6;
   border-radius: 5px;
   font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 /* Product List styling */
@@ -109,12 +111,3 @@ input[type="text"] {
   height: 100px;
 }
 
-.search-bar{
-  width: 100%;
-  max-width: 500px;
-  padding: 10px;
-  margin: 20px 0;
-  border: 1px solid #d44f4f;
-  border-radius: 5px;
-  font-size: 1rem;
-}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddProductForm from './AddProductForm';
 import ProductList from './ProductList';
+import logo from './logo.jpeg'; // Import the logo image
 
 const AdminPage = () => {
   const [products, setProducts] = useState([]);
@@ -48,12 +49,22 @@ const AdminPage = () => {
 
   return (
     <div>
-      <h1>Naatu Deals</h1>
+     <div className='user-header'>
+        <div className='logo-div'>
+          <img src={logo} alt='logo' className='logo-image'/> <br></br>
+          <div className='header-text'>
+          <h1>Naatu Deals</h1>
+          <h3>💥Admin Page 💥</h3>
+         
+          </div>
+         
+        </div>
+      </div>
       <input
         type="text"
         placeholder="Search products..."
         value={searchQuery}
-        onChange={handleSearchChange}
+        onChange={handleSearchChange} className='search-bar'
       />
       <AddProductForm onAddProduct={(product) => {
         setProducts([...products, product]);
