@@ -1,6 +1,6 @@
 .add-product-form {
     max-width: 60%;
-    margin: 0 auto 50px auto; /* Center the form horizontally */
+    margin: 50px auto 50px auto; /* Center the form horizontally */
     padding: 20px;
     border: 5px solid #ddd;
     border-radius: 8px;

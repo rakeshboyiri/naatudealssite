@@ -60,16 +60,17 @@ const AdminPage = () => {
          
         </div>
       </div>
+      
+      <AddProductForm onAddProduct={(product) => {
+        setProducts([...products, product]);
+        setFilteredProducts([...products, product]); // Update filtered products
+      }} />
       <input
         type="text"
         placeholder="Search products..."
         value={searchQuery}
         onChange={handleSearchChange} className='search-bar'
       />
-      <AddProductForm onAddProduct={(product) => {
-        setProducts([...products, product]);
-        setFilteredProducts([...products, product]); // Update filtered products
-      }} />
       <ProductList products={filteredProducts} onRemoveProduct={removeProduct} />
     </div>
   );
