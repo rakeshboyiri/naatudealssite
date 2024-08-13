@@ -111,3 +111,11 @@ input, button {
   height: 100px;
 }
 
+.remove-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

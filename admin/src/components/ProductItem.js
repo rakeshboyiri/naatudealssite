@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 const ProductItem = ({ product, onRemove }) => {
   const handleClick = () => {
@@ -10,7 +11,7 @@ const ProductItem = ({ product, onRemove }) => {
       <img src={product.photo} alt={product.name} onClick={handleClick} />
       <p>{product.name}</p>
       {onRemove && (
-        <button onClick={onRemove}>Remove</button>
+        <button onClick={onRemove }className='remove-button'>Remove</button>
       )}
     </div>
   );
