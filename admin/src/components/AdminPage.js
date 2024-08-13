@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; // Import Link for routing
 import AddProductForm from './AddProductForm';
 import ProductList from './ProductList';
 import logo from './logo.jpeg'; // Import the logo image
@@ -25,7 +26,7 @@ const AdminPage = () => {
 
   const removeProduct = async (id) => {
     try {
-      await axios.delete(`https://naatudealssite-backend.onrender.com`+`/api/products/${id}`);
+      await axios.delete(`https://naatudealssite-backend.onrender.com/api/products/${id}`);
       setProducts(products.filter(product => product._id !== id));
       setFilteredProducts(filteredProducts.filter(product => product._id !== id)); // Update filtered products
     } catch (err) {
@@ -49,15 +50,13 @@ const AdminPage = () => {
 
   return (
     <div>
-     <div className='user-header'>
+      <div className='user-header'>
         <div className='logo-div'>
-          <img src={logo} alt='logo' className='logo-image'/> <br></br>
+          <img src={logo} alt='logo' className='logo-image'/> <br />
           <div className='header-text'>
-          <h1>Naatu Deals</h1>
-          <h3>💥Admin Page 💥</h3>
-         
+            <h1>Naatu Deals</h1>
+            <h3>💥Admin Page 💥</h3>
           </div>
-         
         </div>
       </div>
       
@@ -65,12 +64,15 @@ const AdminPage = () => {
         setProducts([...products, product]);
         setFilteredProducts([...products, product]); // Update filtered products
       }} />
+      
       <input
         type="text"
         placeholder="Search products..."
         value={searchQuery}
-        onChange={handleSearchChange} className='search-bar'
+        onChange={handleSearchChange}
+        className='search-bar'
       />
+      
       <ProductList products={filteredProducts} onRemoveProduct={removeProduct} />
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for routing
 import '../App.css';
 
 const ProductItem = ({ product, onRemove }) => {
@@ -10,8 +11,9 @@ const ProductItem = ({ product, onRemove }) => {
     <div className="product-item">
       <img src={product.photo} alt={product.name} onClick={handleClick} />
       <p>{product.name}</p>
+     
       {onRemove && (
-        <button onClick={onRemove }className='remove-button'>Remove</button>
+        <button onClick={onRemove} className='remove-button'>Remove</button>
       )}
     </div>
   );
