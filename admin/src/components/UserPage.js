@@ -64,6 +64,9 @@ const UserPage = () => {
       />
       </div>
       <ProductListUser products={filteredProducts} onProductClick={handleProductClick} />
+      <div className='footer'>
+      hello
+      </div>
     </div>
   );
 };
