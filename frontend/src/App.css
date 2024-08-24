@@ -138,3 +138,11 @@ input[type="text"] {
 .logo-div{
  
 }
+
+@media (max-width: 768px) {
+  .product-item {
+      max-width: 200px;
+      margin: 5px;
+  }
+}
+

@@ -63,7 +63,7 @@ const UserPage = () => {
       />
       </div>
       <ProductListUser products={filteredProducts} onProductClick={handleProductClick} />
-      
+  
     </div>
     
   );
