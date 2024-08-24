@@ -31,7 +31,7 @@ input, button {
 .user-page {
   font-family: Arial, sans-serif;
   padding: 0px 0px 20px 0px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
