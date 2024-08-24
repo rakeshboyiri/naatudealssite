@@ -35,16 +35,14 @@ input, button {
   margin: 0 auto;
 }
 
-/* Header section styling */
+
 .user-header {
   background-color: hsl(0, 0%, 100%);
-  padding: 10px 20px;
+  padding: 10px 0px;
   border-bottom: 2px solid #ddd;
   text-align: center;
 }
 .header-text{
-  margin:30px  auto 30px auto;
-  padding: 20px 0px 20px 0px;
   background-color: #92bce9;
 
   width: 100%;
