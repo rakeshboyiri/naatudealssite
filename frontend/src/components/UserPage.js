@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductListUser from './ProductListUser';
-import '../App.css'; // Import the CSS file
-import logo from './logo.jpeg'; // Import the logo image
-
+import '../App.css';
+import logo from './logo.jpeg'; 
 const UserPage = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
