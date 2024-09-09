@@ -23,9 +23,7 @@ const User = () => {
       fetchProducts();
     }, []);
   
-    if(products.length === 0) {
-     return <Shimmer />;
-    }
+  
     const searchProducts = (query) => {
       const lowerCaseQuery = query.toLowerCase();
       const results = products.filter(product =>
@@ -44,7 +42,7 @@ const User = () => {
       window.location.href = link; // Redirect to the product link
     };
   
-    return (
+    return products.length === 0 ? <Shimmer /> : (
       <div className='user-page'>
         <div className='search-bar-div'>
         <input
