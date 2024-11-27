@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // Import Link for routing
 import AddProductForm from './AddProductForm';
 import ProductList from './ProductList';
-import logo from './logo.jpeg'; // Import the logo image
+import logo from './logo.jpeg';
 
 const AdminPage = () => {
   const [products, setProducts] = useState([]);
@@ -15,7 +14,7 @@ const AdminPage = () => {
       try {
         const response = await axios.get('https://naatudealssite-backend.onrender.com/api/products');
         setProducts(response.data);
-        setFilteredProducts(response.data); // Initialize filtered products
+        setFilteredProducts(response.data);
       } catch (err) {
         console.error(err);
       }
@@ -28,24 +27,27 @@ const AdminPage = () => {
     try {
       await axios.delete(`https://naatudealssite-backend.onrender.com/api/products/${id}`);
       setProducts(products.filter(product => product._id !== id));
-      setFilteredProducts(filteredProducts.filter(product => product._id !== id)); // Update filtered products
+      setFilteredProducts(filteredProducts.filter(product => product._id !== id));
     } catch (err) {
       console.error(err);
     }
   };
 
-  const searchProducts = (query) => {
-    const lowerCaseQuery = query.toLowerCase();
-    const results = products.filter(product =>
-      product.name.toLowerCase().includes(lowerCaseQuery)
+  const updateProduct = (updatedProduct) => {
+    const updatedProducts = products.map(product =>
+      product._id === updatedProduct._id ? updatedProduct : product
     );
-    setFilteredProducts(results);
+    setProducts(updatedProducts);
+    setFilteredProducts(updatedProducts);
   };
 
   const handleSearchChange = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-    searchProducts(query);
+    const results = products.filter(product =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredProducts(results);
   };
 
   return (
@@ -62,7 +64,7 @@ const AdminPage = () => {
       
       <AddProductForm onAddProduct={(product) => {
         setProducts([...products, product]);
-        setFilteredProducts([...products, product]); // Update filtered products
+        setFilteredProducts([...products, product]);
       }} />
       
       <input
@@ -73,7 +75,11 @@ const AdminPage = () => {
         className='search-bar'
       />
       
-      <ProductList products={filteredProducts} onRemoveProduct={removeProduct} />
+      <ProductList 
+        products={filteredProducts} 
+        onRemoveProduct={removeProduct} 
+        onUpdateProduct={updateProduct} 
+      />
     </div>
   );
 };

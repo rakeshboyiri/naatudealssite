@@ -4,9 +4,11 @@ import { useParams, useNavigate } from 'react-router-dom'; // Import useParams a
 
 const EditProductPage = () => {
   const { id } = useParams(); // Get the product ID from URL
+  console.log("Product ID:", id); // Check if id is defined
   const navigate = useNavigate(); // Use navigate for navigation
   const [product, setProduct] = useState({ name: '', photo: '', link: '' });
 
+  // Fetch the product data using the ID from the URL
   useEffect(() => {
     const fetchProduct = async () => {
       try {
