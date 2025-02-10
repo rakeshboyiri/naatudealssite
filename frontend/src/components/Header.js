@@ -1,9 +1,11 @@
-import logo from './logo.jpeg'; 
+// import logo from './logo.jpeg'; 
+// import logo2 from './logo2.jpeg'
+import logo3 from './logo3.png'
 const Header = () => {
 return (
     <div className='user-header'>
         <div className='logo-div'>
-          <img src={logo} alt='logo' className='logo-image'/> <br></br>
+          <img src={logo3} alt='logo' className='logo-image'/> <br></br>
           <div className='header-text'>
           <h1>Naatu Deals</h1>
           <h3>💥Join Our Telegram Channel & Grab the Deals 💥</h3>
